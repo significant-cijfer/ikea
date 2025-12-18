@@ -1,7 +1,7 @@
 .{
     .name = .ikea,
     .version = "0.0.0",
-    .fingerprint = 0x468757843c0d9aab, // Changing this has security and trust implications.
+    .fingerprint = 0x1d78d78bef06ce3, // Changing this has security and trust implications.
     .minimum_zig_version = "0.15.2",
     .dependencies = .{
     },
