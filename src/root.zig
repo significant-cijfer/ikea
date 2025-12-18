@@ -73,6 +73,26 @@ pub const Database = struct {
                 std.debug.print("    {s}: {},\n", .{k, v});
         }
     }
+
+    fn treeify(self: *Database, idx: Node.idx, len: Node.idx) Node.idx {
+        const ax = @min(len, 0);
+        const bx = @min(len, 8);
+        const cx = @min(len, 16);
+        const dx = @min(len, 24);
+
+        const ay = @min(len, 8);
+        const by = @min(len, 16);
+        const cy = @min(len, 24);
+        const dy = @min(len, 32);
+
+        const a = self.nodes.items[ax..ay];
+        const b = self.nodes.items[bx..by];
+        const c = self.nodes.items[cx..cy];
+        const d = self.nodes.items[dx..dy];
+
+        return .{
+        };
+    }
 };
 
 const View = struct {
