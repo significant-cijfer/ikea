@@ -16,5 +16,7 @@ pub fn main() !void {
     const path = args.next() orelse return error.NotEnoughArgs;
     _ = root;
 
-    try db.readParquet(std.fs.path.stem(path), path);
+    const stem = std.fs.path.stem(path);
+    try db.readParquet(stem, path);
+    //db.debugTable(stem);
 }
